@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i6f-Jo-KHf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trials View Controller-->
+        <scene sceneID="yhk-1a-aNS">
+            <objects>
+                <viewController storyboardIdentifier="conversationsViewController" title="Trials View Controller" id="i6f-Jo-KHf" customClass="ConverationsViewController" customModule="MINTXT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="198-io-wFX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nGr-NL-ug3">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="trialCell" rowHeight="60" id="Z6U-Dq-8M7" customClass="TrialCell" customModule="MINTXT" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z6U-Dq-8M7" id="e1E-yj-ab5">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thought on Trial v1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSf-Sr-glz">
+                                                    <rect key="frame" x="20" y="15.5" width="374" height="29"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GSf-Sr-glz" firstAttribute="leading" secondItem="e1E-yj-ab5" secondAttribute="leadingMargin" id="DX0-Ok-veR"/>
+                                                <constraint firstItem="GSf-Sr-glz" firstAttribute="centerY" secondItem="e1E-yj-ab5" secondAttribute="centerY" id="PZs-9O-TaX"/>
+                                                <constraint firstItem="GSf-Sr-glz" firstAttribute="centerX" secondItem="e1E-yj-ab5" secondAttribute="centerX" id="S8R-Kd-eGA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GSf-Sr-glz" secondAttribute="trailing" id="sWI-ul-jgr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="trialTitle" destination="GSf-Sr-glz" id="Tc2-MV-pqc"/>
+                                            <segue destination="Ykd-72-vhM" kind="show" id="ScU-Na-gV0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUP-4a-f1y">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thoughts on Trial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCS-eK-yUn">
+                                        <rect key="frame" x="20" y="80" width="259" height="42"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="aCS-eK-yUn" secondAttribute="bottom" constant="18" id="Z72-Wv-k62"/>
+                                    <constraint firstAttribute="height" constant="140" id="iNe-PK-Eix"/>
+                                    <constraint firstItem="aCS-eK-yUn" firstAttribute="leading" secondItem="hUP-4a-f1y" secondAttribute="leadingMargin" constant="12" id="jQC-zb-1pw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NfO-xk-i75"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nGr-NL-ug3" firstAttribute="leading" secondItem="NfO-xk-i75" secondAttribute="leading" id="01I-Ua-dT4"/>
+                            <constraint firstItem="hUP-4a-f1y" firstAttribute="trailing" secondItem="NfO-xk-i75" secondAttribute="trailing" id="YDQ-ID-upk"/>
+                            <constraint firstItem="hUP-4a-f1y" firstAttribute="top" secondItem="198-io-wFX" secondAttribute="top" id="e2G-tH-2nD"/>
+                            <constraint firstItem="nGr-NL-ug3" firstAttribute="trailing" secondItem="NfO-xk-i75" secondAttribute="trailing" id="hia-uG-NfD"/>
+                            <constraint firstItem="nGr-NL-ug3" firstAttribute="top" secondItem="hUP-4a-f1y" secondAttribute="bottom" id="jli-aJ-Xlm"/>
+                            <constraint firstAttribute="bottom" secondItem="nGr-NL-ug3" secondAttribute="bottom" id="n2a-tj-c0K"/>
+                            <constraint firstItem="hUP-4a-f1y" firstAttribute="leading" secondItem="NfO-xk-i75" secondAttribute="leading" id="qFB-50-iLp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Trials" id="zfl-Tt-sGD"/>
+                    <connections>
+                        <outlet property="table" destination="nGr-NL-ug3" id="t0e-MU-dH1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hHF-9p-jY1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1298.5507246376812" y="-664.28571428571422"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="Arn-Z6-fFg">
+            <objects>
+                <viewController storyboardIdentifier="chatViewController" id="Ykd-72-vhM" customClass="ChatViewController" customModule="MINTXT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Wp-wi-6WV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9Z-9O-0YU">
+                                <rect key="frame" x="0.0" y="70" width="414" height="772"/>
+                                <connections>
+                                    <segue destination="7xv-lk-NcP" kind="embed" id="yFE-XC-YqK"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZfU-6M-mb3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thought on Trial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1W-cm-oGu">
+                                        <rect key="frame" x="20" y="16" width="207" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bm4-hg-qJe">
+                                        <rect key="frame" x="341" y="21" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottomMargin" secondItem="J1W-cm-oGu" secondAttribute="bottom" constant="10" id="FNk-9T-FFS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bm4-hg-qJe" secondAttribute="trailing" constant="24" id="S3d-S8-Afp"/>
+                                    <constraint firstItem="J1W-cm-oGu" firstAttribute="leading" secondItem="ZfU-6M-mb3" secondAttribute="leadingMargin" constant="12" id="m0k-xh-Toc"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bm4-hg-qJe" secondAttribute="bottom" constant="18" id="ymu-5X-OX1"/>
+                                    <constraint firstAttribute="height" constant="70" id="yu0-2i-9AE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wds-Qd-E3B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZfU-6M-mb3" firstAttribute="leading" secondItem="Wds-Qd-E3B" secondAttribute="leading" id="41Q-gZ-C3b"/>
+                            <constraint firstItem="C9Z-9O-0YU" firstAttribute="trailing" secondItem="Wds-Qd-E3B" secondAttribute="trailing" id="Q0F-ck-v2t"/>
+                            <constraint firstAttribute="bottom" secondItem="C9Z-9O-0YU" secondAttribute="bottom" id="hYT-WH-3xg"/>
+                            <constraint firstItem="ZfU-6M-mb3" firstAttribute="top" secondItem="5Wp-wi-6WV" secondAttribute="top" id="l0u-Nu-WwO"/>
+                            <constraint firstItem="C9Z-9O-0YU" firstAttribute="leading" secondItem="Wds-Qd-E3B" secondAttribute="leading" id="p7P-9E-s70"/>
+                            <constraint firstItem="C9Z-9O-0YU" firstAttribute="top" secondItem="ZfU-6M-mb3" secondAttribute="bottom" id="qcv-gU-Whm"/>
+                            <constraint firstItem="ZfU-6M-mb3" firstAttribute="trailing" secondItem="Wds-Qd-E3B" secondAttribute="trailing" id="row-mj-o5U"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fin-yn-kjk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mDS-Ne-ZfQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2086.9565217391305" y="-664.28571428571422"/>
+        </scene>
+        <!--ChatS View Controller-->
+        <scene sceneID="wPw-XC-zFC">
+            <objects>
+                <viewController storyboardIdentifier="chatSViewController" id="7xv-lk-NcP" customClass="ChatSViewController" customModule="MINTXT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ld-qM-5MK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="772"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRH-A4-cc4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2864" y="-625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
